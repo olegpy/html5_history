@@ -21,42 +21,48 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-                <a class="navbar-brand" href="{% url  'index' %}"><img src="{% static 'images/logo.jpg' alt='img' %}"></a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="{% block nav_class_index %}{% endblock nav_class_index %}"><a href="{% url  'index' %}">Main</a></li>
-                    <li class="{% block nav_class_post %}{% endblock nav_class_post %}"><a href="">Blog</a></li>
-                </ul>
-                
-                
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+    <div class="wrapper">
+        <div class="content">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        
+                        <a class="navbar-brand" href="{% url  'index' %}"><img src="{% static 'images/logo.jpg' alt='img' %}"></a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="{% block nav_class_index %}{% endblock nav_class_index %}"><a href="{% url  'index' %}">Main</a></li>
+                            <li class="{% block nav_class_post %}{% endblock nav_class_post %}"><a href="">Blog</a></li>
+                        </ul>
+                        
+                        
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
 
-    <div id="content" class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                {% block content %}{% endblock %}
+            <div id="content" class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        {% block content %}{% endblock %}
+                    </div>
+                </div>
+
+                        
             </div>
         </div>
-
-                
+        <footer>Powered by @Oleg</footer>
     </div>
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

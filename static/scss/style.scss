@@ -6,6 +6,24 @@ body {
 	font: $font_theme;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.content {
+  display: table-row;
+  height: 100%;
+}
+
 h1 {
 	a {
 		color:#FCA205;
@@ -111,4 +129,7 @@ h1, h2, h3, h4 {
     }
 }
 
-
+footer {
+    padding: 30px 15px;
+    background: gray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset;}
