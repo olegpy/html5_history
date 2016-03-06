@@ -12,7 +12,11 @@ $(document).ready(function(){
     });
 
     // add some text to url and open modal window
-    modalWindow('#modal')
+    modalWindow('modal');
+
+    $(document).on('click', '.close-modal', function(){
+        $(this).closest(".modal" ).modal('hide');
+    });
 
 });
 
@@ -38,8 +42,9 @@ function getContent(url, addEntry) {
 }
 
 function modalWindow(text) {
+    // add to window location text
     $(document).on('click', '.openmodal' ,function(){
-        window.location.href = text;
+        window.location.hash = text;
     });
 
     if (window.location.hash == text) {
