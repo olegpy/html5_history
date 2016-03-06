@@ -47,7 +47,7 @@ function modalWindow(text) {
         window.location.hash = text;
     });
 
-    if (window.location.hash == text) {
+    if (window.location.hash == "#" + text) {
         $('#myModal').modal('show') 
     }
 }
