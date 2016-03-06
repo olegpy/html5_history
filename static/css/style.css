@@ -57,9 +57,6 @@ h1, h2, h3, h4 {
     .info.page_blog a {
       color: white; }
 
-.post-form textarea, .post-form input {
-  width: 100%; }
-
 .top-menu {
   padding: 18px 0;
   margin-bottom: 0; }
@@ -82,18 +79,8 @@ h1, h2, h3, h4 {
   color: red;
   font-weight: bold; }
 
-#comments {
-  padding-left: 0px; }
-  #comments li {
-    list-style-type: none;
-    font-size: 14px;
-    background: #0E0E0E;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    color: white;
-    padding: 10px;
-    margin-bottom: 10px; }
+button.btn {
+  margin-bottom: 20px; }
 
 footer {
   padding: 30px 15px;

@@ -2,13 +2,20 @@ $(document).ready(function(){
 
     $('.historyAPI').on('click', function(e){
         e.preventDefault();
-        var href = $(this).children().attr('href');
+        var href = $(this).attr('href');
 
         // Getting Content
         getContent(href, true);
+        console.log($(this));
 
-        $('.historyAPI').removeClass('active');
-        $(this).addClass('active');
+        
+
+        // console.log($(this).parent);
+        $('.historyAPI').parent().removeClass('active');
+        $(this).parent().addClass('active');
+    });
+    $('.openmodal').on('click', function(){
+        // window.location.href = '#myModal';
     });
 
 });
@@ -23,9 +30,8 @@ window.addEventListener("popstate", function(e) {
 function getContent(url, addEntry) {
     $.get(url)
     .done(function( data ) {
-
         // Updating Content on Page
-        $('#contentHolder').html($(data).find("#contentHolder").html());
+        $('.content-page').html($(data).find(".content-page").html());
 
         if(addEntry == true) {
             // Add History Entry using pushState
