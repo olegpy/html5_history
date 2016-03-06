@@ -6,19 +6,16 @@ $(document).ready(function(){
 
         // Getting Content
         getContent(href, true);
-        console.log($(this));
 
-        
-
-        // console.log($(this).parent);
         $('.historyAPI').parent().removeClass('active');
         $(this).parent().addClass('active');
     });
-    $('.openmodal').on('click', function(){
-        // window.location.href = '#myModal';
-    });
+
+    // add some text to url and open modal window
+    modalWindow('#modal')
 
 });
+
 
 // Adding popstate event listener to handle browser back button
 window.addEventListener("popstate", function(e) {
@@ -40,3 +37,14 @@ function getContent(url, addEntry) {
 
     });
 }
+
+function modalWindow(text) {
+    $(document).on('click', '.openmodal' ,function(){
+        window.location.href = text;
+    });
+
+    if (window.location.hash == text) {
+        $('#myModal').modal('show') 
+    }
+}
+
