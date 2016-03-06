@@ -19,7 +19,6 @@ $(document).ready(function(){
 
 // Adding popstate event listener to handle browser back button
 window.addEventListener("popstate", function(e) {
-    console.log(location.pathname);
     // Get State value using e.state
     getContent(location.pathname, false);
 });
